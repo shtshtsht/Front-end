@@ -1,0 +1,57 @@
+HTML常用标签
+1、标题标签 h
+
+2、字体倾斜 i em
+
+3、字体加粗 b strong
+
+4、下划线 u
+
+5、换行 单标签 br
+
+6、画水平线 单标签 hr
+
+7、段落 p
+
+8、常用特殊字符
+&lt左尖括号； &gt右； &nbsp;空格; &copy；圈C标记；
+
+9、块 div
+
+10、行内 span
+
+11、列表 无序ul；有序ol；自定义dl；
+ul和ol内含li；dl内含dt名词和dd解释；
+
+12、超链接 a hrdf="" 用#表示空路径
+连接外部网络，需要写http
+title=“”鼠标移入提示
+alt=“”失效提示
+
+13、图片 img src=“”路径最好使用相对路径
+title=“”鼠标移入提示
+alt=“”失效提示
+
+14、表格元素table
+table包着行tr；行包着列td
+cellspaceing 单元格之间的距离
+cellpadding 内容与表格之间的填充
+内容对齐方式：align水平，valign垂直
+合并单元格：colspan行合并，rowspan列合并
+
+15、表单form
+<form name="" method="post/get" action=""></form>
+控件input中type可选多种控件类型
+常用控件：文本text；密码password；提交submit；重置reset；单选radio；多选checkbox；按钮button；
+placeholder=“文本框中初始提示词”
+单选radio需要设置name，一组需要同一个name
+disable禁用选项；checked默认选项；
+
+16、下拉菜单select
+<select>
+	<option>选项1</option>
+	<option>选项1</option>
+</select>
+
+17、多行文本框textarea
+设置初始大小，没试出来是按汉字还是字符计算cols="";rows="";
