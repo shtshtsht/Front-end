@@ -1,0 +1,20 @@
+1、背景色
+background-color：
+
+2、背景图片
+background-image：
+默认图片是平铺模式。
+
+3、平铺模式选择
+background-repeat：
+背景色和背景图共存，可以通过选择平铺模式实现特殊效果。
+
+4、图片显示位置
+background-position：值1 值2；
+值1：水平方向的对齐方式 / 数值
+值2：竖直方向的对齐方式 / 数值
+数值基准是：左 上
+数值还可以是负值
+
+5、所有background各种属性可以写在一起
+background：属性1 属性2 属性3····
