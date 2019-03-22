@@ -32,4 +32,4 @@ ellipsis：显示省略号
 需要设置list-style-position：inside；
 
 5、li 的标识符在不同浏览器中显示效果差异很大，用background-image作为标识符时常用操作；
-让图片位置靠左，上下居中50%；
+让背景图片位置靠左，上下居中50%；background-position：left 50%；
