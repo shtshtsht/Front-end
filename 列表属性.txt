@@ -1,0 +1,12 @@
+1、行前符号
+list-style-type:disc/circle/square/none；
+实心圆，空心圆，实心方块，去掉符号
+不同浏览器显示效果区别很大，所以通常用图片代替。
+
+2、list-style-image：url图片；
+图片的大小和列表文字大小不匹配，所以通常不直接用图片，而是用背景图片
+
+3、list-style-position:outside/inside;
+定义列表符号的位置。ul有个范围，li有个范围，outside指在li范围外面，inside在li的里面。
+
+4、list-style：none；
