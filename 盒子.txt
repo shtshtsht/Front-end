@@ -1,0 +1,42 @@
+盒子属性：边框border；外边界margin；填充padding；
+有些标签自带默认margin和padding，通常用*{}把他们重置为0
+
+*******************************************************
+1、border
+宽度 border-width
+颜色 border-color
+样式 border-style：solid/dashed/dotted/double;
+
+2、可以单独操作一条边，border-bottom：xxx；
+清除右边框样式border-right：none；
+
+3、每个属性还可以一次性设置四条边，顺时针方向生效
+border-color：red blue green pink；
+
+4、border-width 尺寸也是在原有基础上加的
+
+*******************************************************
+1、padding
+值是额外加在元素原有大小之上，要保证元素大小不变，需要元素减去添加的padding值
+
+2、padding控制调节子元素的位置关系，写在父元素上
+
+3、四个值：顺时针 上 右 下 左
+三个值：上  左右  下
+两个值：上下  左右
+一个值：四个方向
+
+4、也可以单独操作某一个方向
+
+********************************************************
+1、margin
+块元素在浏览器水平剧中 margin：auto;
+
+2、上下相邻兄弟元素margin不是相加，而是取较大的一个。
+
+3、子元素的margin-top值会传给父容器，父元素需要overflow：hidden；
+
+********************************************************
+大块之间用margin
+大块之内用padding
+内容的尺寸加上padding、margin和border的值才是整个盒子的尺寸
