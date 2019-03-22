@@ -1,0 +1,35 @@
+文本超长时的显示方式处理
+
+1、overflow
+定义溢出的内容怎么处理，默认visible
+overflow：visible/hidden/scroll/auto/inherit：
+visible：内容不被修剪，直接显示
+hidden：被修剪掉，变得不可见
+scroll：不直接显示，但是浏览器显示滚动条，不溢出时滚动条也存在
+auto：如果溢出，则显示滚动条
+inherit：从父元素继承overflow的设置
+
+2、white-space
+设置如何处理元素内部的空白（如文本中的空格和回车），默认normal
+white-space：normal/pre/nowrap/pre-wrap/pre-line/inherit;
+normal：空白被浏览器忽略
+pre：被保留
+nowrap：文本遇到边界不自动换行，直到遇到换行标签br
+pre-wrap：保留空格和回车
+pre-line：合并空格，保留回车
+inherit：继承父元素
+
+3、text-overflow
+需要容器有【宽度，强制在一行显示nowrap，溢出内容隐藏hidden】，这三个前置属性
+当文本溢出外壳元素时怎么处理
+text-overflow：clip/ellipsis；
+clip：不显示省略号，溢出的文本不显示。
+ellipsis：显示省略号
+
+4、回顾
+列表的 li 的标识符默认在 li 的范围外面
+操作生成上述省略号时，overflow：hidden；会把标识符隐藏掉
+需要设置list-style-position：inside；
+
+5、li 的标识符在不同浏览器中显示效果差异很大，用background-image作为标识符时常用操作；
+让图片位置靠左，上下居中50%；
