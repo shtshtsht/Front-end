@@ -30,7 +30,7 @@ border-color：red blue green pink；
 
 ********************************************************
 1、margin
-块元素在浏览器水平剧中 margin：auto;
+块元素在浏览器水平居中 margin：auto;
 
 2、上下相邻兄弟元素margin不是相加，而是取较大的一个。
 
