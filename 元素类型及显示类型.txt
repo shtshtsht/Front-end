@@ -1,0 +1,47 @@
+块状元素；内联（行内）元素；可变元素
+
+1、块状元素
+显示为矩形区域的元素，默认情况下单独占一行，两个块元素不会同行
+div; dl; dt; dd; ol; ul; fieldset; h; p; form; hr; iframe; colgroup; col; table; tr; td等
+要同行显示，就要设置浮动
+有自己的形状，默认宽度为100%，默认高度为子元素高度。
+
+2、内联元素
+在一行内逐个显示，没有自己的形状。即不可定义宽和高
+a；span; i; em; strong; b;
+
+3、可变元素
+根据上下文确定是块还是内联
+（还没遇到）
+
+***************************************************************
+元素类型显示方式转换
+display属性
+display：none/inline/block/inline-block/list-item等等
+
+1、block
+设置浮动float属性，显示变为block
+写导航条，给超链设置宽高，常用display：block；
+
+2、inline
+回车被收缩为空格
+失去外形属性设置能力
+
+3、inline-block（较少用）
+非独占一行，回车被收缩为空格
+可以设置宽高，不设置宽高，则由内容撑开宽高。
+通常使用float实现这类显示
+
+4、图片image 和 表单控件form中的input 是inline元素
+但是默认display属性是inline-block
+
+5、none
+元素不会被显示
+
+6、list-item（较少用）
+把元素变为列表
+
+7、列表是block元素，但是默认display属性是list-item
+
+*******************************************************
+今日实验：导航栏
