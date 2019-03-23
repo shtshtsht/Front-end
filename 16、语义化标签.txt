@@ -1,0 +1,34 @@
+可以取代 div span 等无意标签，快速搭建页面框架结构。
+
+1、header
+头块
+
+2、footer
+脚注块
+
+3、article
+内容块（大块）
+
+4、aside
+边栏块
+
+5、section
+（小块）
+
+6、nav
+导航栏
+
+7、figure
+一个独立的流内容单元。figcaption添加提示和标题
+<figure>
+	img
+	<figcaption>描述信息</figcaption>
+</figure>
+
+8、mark
+高亮
+
+*********************************************************
+HBuilderX 代码提示与补全
+新语义标签有提示，但是回车不会自动补全。
+键入标签名，tab补全。
