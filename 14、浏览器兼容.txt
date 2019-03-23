@@ -1,0 +1,68 @@
+五个主流内核：Trident，Cecko，Webkit，Presto，Blink
+
+1、trident（不开源）：ie，遨游，世界之窗，360
+
+2、gecko（开源）：火狐，优势跨平台
+
+3、webkit（开源）：safari，chrome，
+
+4、presto：opera，渲染速度最快，时opera software开发的浏览器排版引擎
+
+5、blink：google和opera software 开发的浏览器排版引擎。
+
+************************************************************************
+常见CSS解析bug的处理方法
+
+1、图片间隙
+在未设置高度的div中放置图片，div的高度比图片高度高了一点，图片下边沿与div边界出现间隙。
+把图片display转为block。
+
+2、双倍边距
+在ie6以及更低版本的浏览器中，float元素浮向边界会加倍显示。
+添加 _display:inline;
+
+3、默认高度
+ie6及以下，部分块元素默认高度最低18px。
+添加overflow：hidden；
+
+4、表单元素行高不一致
+如：input的text和button显示的文字不在同一水平线上。
+float：left；
+处理之后文字同一水平线，元素可能会不在同一水平线。
+
+5、按钮元素默认大小不统一
+方法1、用<a href="#">按钮名</a>代替input的按钮
+方法2、给input写按钮样式，注意去掉input的边框
+方法3、设置按钮背景图片。
+
+6、百分比bug
+ie6及以下 50%+50%会大于100%
+100%分给多个float后，再相加大于100%。给最右的声明clear：right；
+
+7、鼠标指针样式bug
+通用手形指针样式：cursor：pointer;
+
+8、透明属性不起作用bug
+设置元素透明度，opacity：值；值取值范围（0-1）
+ie6中会失效，需要写为，filter：alpha（opacity=值）；值的范围（1-100）
+
+***********************************************************************
+过滤器（filter）
+1、下划线
+在属性前加下划线
+如最小高度设置时，min-height：50px; _height:50px;
+高版本浏览器会忽略带有下划线的属性。ie6则可以解析。
+
+2、！important
+表示附加的声明具有最高优先级。
+background-color：red！important；设置red权重最高
+
+3、*
+针对ie7，带*的属性值权重最高。
+
+*******************************************************
+示例：
+background-color：red；*background-color：green；_background-color：blue；在高版本中显示红色，ie7中显示绿色，ie6中显示蓝色。
+
+
+
