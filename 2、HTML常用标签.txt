@@ -53,4 +53,7 @@ disable禁用选项；checked默认选项；
 </select>
 
 17、多行文本框textarea
-设置初始大小，没试出来是按汉字还是字符计算cols="";rows="";
+cols="" rows=""
+设置初始大小，没试出来是按汉字还是字符计算;
+
+
