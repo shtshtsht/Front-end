@@ -10,6 +10,12 @@
 
 5、blink：google和opera software 开发的浏览器排版引擎。
 
+强制兼容前缀
+-webkit-       safari  google
+-ms-           ie
+-moz-          firefox
+-o-            opera
+
 ************************************************************************
 常见CSS解析bug的处理方法
 
