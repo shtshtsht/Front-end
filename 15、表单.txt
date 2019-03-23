@@ -1,0 +1,28 @@
+1、表单域
+<form name="" method="" action=""></form>
+提交post，获取get。
+post：用户不可见。可提交大量数据。
+get：提交的数据在地址栏显示，用户可见。
+
+2、表单控件
+<input type="" value=""/>
+文本框；密码框；普通按钮；提交；重置；单选；复选；
+
+3、下拉列表
+<select>
+	<option value="">abc</option>
+	<option value="">abc</option>
+</select>
+
+4、表单分区集合 fieldset
+用法类似div，把表单中的元素分为不同功能块。
+自带边框效果。
+
+5、分区集合标题 legend
+必须是 fieldset 中的第一个标签
+
+6、文字与控件绑定
+<label for="绑定的控件id">绑定文字</label>
+
+
+
