@@ -13,6 +13,7 @@ background-repeat：
 background-position：值1 值2；
 数值基准是：左  上
 数值还可以是负值
+background-position-x 和 background-position-y 可以进行单一方向上的调整
 
 5、所有background各种属性可以写在一起
 background：属性1 属性2 属性3····
