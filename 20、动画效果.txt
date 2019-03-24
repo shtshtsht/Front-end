@@ -1,0 +1,124 @@
+过渡动画，2D，3D，关键帧动画
+*************************************************************
+CSS3过渡动画
+
+显示过度的两个必备条件：添加的目标元素，效果持续时间
+主要用途：增加hover效果柔和度
+
+transition写在变化前的style里面
+
+1、transition-property：none/all/宽，高
+none：宽，高没有过渡效果
+all：都有
+width，height：可以只设置一个
+
+2、transition-duration：时长
+过渡变化的持续时间，ms或s为单位
+
+3、transition-timing-function：过渡调节曲线
+linear:线性
+ease：中段加速，两头减速
+ease-in：加速
+ease-out：减速
+ease-in-out：和ease效果差不多，变化更慢
+cubic-bezier（a,b,c,d):贝塞尔曲线，参数可从cubic-bezier.com网站获取。
+
+4、transition-delay：延时时长
+延迟时长之后再显示变化。
+注意：延迟要写在变化时长的后面
+
+5、集成
+transition：
+
+*************************************************
+2D变形
+
+默认的变形坐标原点为元素中心
+旋转，扭曲，缩放，移动，矩阵变形
+通常写在hover中，配合CSS3过渡，实现触发动画效果
+
+transform：rotate（）/skew（）/scale（）/translate（）/matrix；
+
+1、旋转
+rotate（30deg）角度表示，正数顺时针
+
+2、移动
+translate（x，y）
+translateX（x）
+translaY（y）
+
+3、缩放
+a,b为缩放倍数，1为不变。小于1则缩小。
+scale（a,b）
+scaleX（a）
+scaleY（b）
+
+4、扭曲
+skew（30deg，40deg）角度表示，水平扭曲和竖直扭曲共存
+skewX（）
+skewY（）
+
+5、改变变化参考坐标原点
+要写在2D变形操作之前
+transform-origin：x坐标 y坐标；
+参数也可以是top left等，也可以是50%等百分数
+
+6、综合多变形
+transform：代码顺序不同，显示效果不同。
+
+******************************************************
+3D变形
+
+通常情况，3d效果写在元素本身，
+透视点和透视距离，写在元素本身和写在父元素，会因透视点参考原点不同而有不同效果。
+
+比2D多了Z轴的控制量
+
+1、3d必备预设置值
+transform-style：flat/preserve-3d；
+preserve-3d：保留3d位置
+
+2、透视点距离
+perspective
+值为0或无穷大或none，则无3d
+取值越小3d越明显
+值为像素值
+常用800-1200-2000px
+
+3、backface-visibility：hidden；
+背面是否可见
+
+*****************************************************
+CSS3关键帧动画
+
+过渡动画常由hover触发，关键帧动画可以自动播放。
+
+注意位置position的绑定关系，relative/absolute
+
+关键帧动画：声明动画名称，绑定元素
+
+1、声明动画
+@keyframes fffff {
+	from{样式}
+	to{样式}
+}
+
+@keyframes fffff {
+	0%{样式}
+	30%{样式}
+	70%{}
+	100%{}
+}
+
+2、animation 属性
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count 规定动画的播放次数
+animation-direction：normal/alternate 多次时控制动画往返方式
+animation-play-state：paused/running；配合js使用
+
+3、可合并为一条属性。
+animation：
+
