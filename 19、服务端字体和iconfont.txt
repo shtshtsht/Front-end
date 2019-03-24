@@ -1,0 +1,15 @@
+1、服务端字体
+在网页中使用安装在服务端的字体，需要先定义字体。
+@font-face{
+font-family:自定义字体名;
+src:url("字体文件")format("字体格式");
+}
+字体格式：opentype对应.otf；TrueType对应.ttf
+
+使用方法：div{font-family:WebFont}
+
+2、iconfont
+图标字体，矢量图。
+阿里巴巴矢量图标库。多色图标可能存在兼容性问题。单色好用。
+把iconfont的css文件导入项目文件夹；使用外部样式调用iconfont字体样式；使用class和对应的icon字体编码访问。
+注意：内部样式和外部样式权重相同，所以改iconfont字体属性时，需要把内部样式写在后面。
