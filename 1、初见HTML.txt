@@ -1,8 +1,10 @@
 HBuilderX
-小巧好用，header、aside等新标签不会自动生成，不知道是不是我装的软件的问题
-语法错误需要安装插件
+小巧好用
 
+语法错误检测需要安装插件
+htmlhint和stylelint
 
+自动格式化 ctrl+k
 
 
 并列关系逗号隔开
