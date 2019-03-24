@@ -1,0 +1,105 @@
+弹性盒子
+
+为了使页面适应不同尺寸的显示设备
+***************************************************************************************************************************
+写在父元素
+
+主轴/侧轴   起点/终点
+main axis/cross axis    main size/cross size
+main start/main end
+cross start/cross start
+
+1、变成弹性盒子
+作用于父容器
+display：flex/inline-flex；
+flex：变弹性盒子
+inline-flex：变内联（行内）弹性盒子显示
+
+flex效果相当于：使用了float和overflow的综合结果
+inline-flex：父元素宽高都由内含元素支撑确定
+
+2、flex-direction：row/row-reverse/column/column-reverse;
+写在父元素中
+默认情况，主轴从左到右，侧轴从上到下
+row：（默认）
+row-reverse：主轴反向，元素排列也随之反向。
+column：主轴变纵向
+column-reverse：主轴纵向且由下到上
+
+3、flex-wrap：nowrap/wrap/wrap-reverse;
+在（尺寸有限的）弹性盒子中，默认情况下不会出现子元素溢出，子元素会被压缩挤进去。
+尺寸溢出时是否换行。
+nowrap：（默认）子元素被压缩。
+wrap：换行，前一行可能出现空隙，新行在前一行的（下方）
+wrap-reverse：新产生的行在前一行的（上方）
+
+4、justify-content：flex-start/flex-end/center/space-between/space-around；
+设置元素在盒子主轴方向上的对齐方式，父元素控件有空余时的排列策略。
+flex-start：沿主轴方向排列，顺序排列，起始元素从起点开始，
+flex-end：沿主轴方向排列，顺序排列，最后一个元素在终点（即默认主轴情况下整体平移到右侧）
+center：顺序排列，集体居中
+space-between：把父元素空间平分，子元素等间距排列，首尾顶格。相当于把子元素加margin，首元素左侧margin去掉，尾元素右侧margin去掉
+space-around：相当于加margin值，等margin值排列，首尾与父容器之间各有一个margin
+
+（注意：元素间margin上下相邻，取最大值；左右相邻，则相加求和）
+
+5、align-items：flex-start/flex-end/center/baseline/stretch；
+设置侧轴方向对齐方式
+子元素没有高度，父元素有高度的情况下，子元素会被拉伸充满父元素。
+flex-start：如果子元素没有高度，则子元素高度由器内容物决定；子元素有高度就保留高度。从侧轴起点开始排列。
+flex-end：从侧轴终点开始排列
+center：相当于竖直方向居中
+baseline：保证所有子元素的内容中的文字的基线一致，（底部平齐）
+stretch：（默认）撑满父元素空间，从主轴起点方向开始排列
+
+6、align-content：flex-start/flex-end/center/space-between/space-around/stretch；
+换行且多行情况下，父容器高度足够高
+flex-start:每一行贴在一起，从侧轴起点开始，顺序排列
+flex-end：贴在一起，顺序排列，末尾贴在侧轴终点
+center:相当于竖直居中，各行贴在一起
+space-between:父元素高度空间平分，首尾顶格，中间等间隔排列
+space-around:相当于加了margin.top和margin.bottom之后的等间距排列
+stretch:（默认)相当于给每一行加一个margin.bottom，让这些行等间距充满父容器高度。（没有margin.top）
+
+********************************************************************************************************************************
+***************************************************************************************************************************
+写在子元素
+
+1、flex-grow：数值
+子元素有自己的宽度，且子元素宽度之和小于父元素宽度；
+数值默认是0。默认不生长
+如果有多个子元素，数值分别是1，2，3，则把剩余空间按1：2：3的比例分配给三个子元素。按比例把子元素拉伸了
+
+2、flex-shrink：数值
+数值默认1，默认缩减。
+子元素尺寸和大于父元素尺寸
+子元素超出部分按比例分配，在子元素中减去。
+设两个子元素长A，B，父元素长C。数值为2，1
+则超出部分为：d=A+B-C
+A中减去值为：（2A /（2A+1B））*d
+B中减去值为：（1B/（2A+1B））*d
+
+3、flex-basis：数值（或百分比）
+默认是auto，不可以是负值。auto就是原值
+设置溢出时的shrink压缩基数，百分比是原值基础上的百分比。
+
+4、复合形式
+顺序为 grow，shrink，basis
+flex：1；表示：1 1 0
+flex：auto；表示：1 1 auto
+flex：none；表示：0 0 auto
+
+5、order：数值；
+可以负值，默认是0
+设置元素的排列顺序值，越小越先排列。沿主轴方向。-2在0前面，5在0后面
+
+6、align-self：auto/flex-start/flex-end/center/baseline/stretch；
+设置元素自身在侧轴方向上的对齐方式
+auto：（默认）集成其父元素的align-items值，如果没有父元素则stretch
+flex-start：贴着侧轴起点
+flex-end：贴着终点
+center：侧轴居中
+baseline：多个含文字子元素，按文字基线对齐
+stretch：拉伸
+
+
