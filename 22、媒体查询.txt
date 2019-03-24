@@ -1,0 +1,12 @@
+根据设备的视窗宽度、屏幕比例、设备方向等特性，设定CSS样式。
+
+可用于检测的媒体特性有width、height、color等，可以在不改变页面内容的情况下，为特定设备定制显示效果。
+
+1、写在CSS中
+@media mediatype and/not/only（media feature）{样式}
+
+2、<link rel="stylesheet" media="mediatype and/not/only(media feature)" href="对应样式表">
+
+mediatype：通常是 screen
+media feature：常用 min-width 和 max-width
+
